@@ -56,7 +56,8 @@ namespace demoapp.Controllers
                     Phone = model.Phone,
                     Salary = model.Salary,
                     Role = model.Role,
-                    Point = model.Point
+                    Point = model.Point,
+                    Status = model.Status
                 };
                 _context.Add(user);
                 _context.SaveChanges();
@@ -84,6 +85,7 @@ namespace demoapp.Controllers
                 user.Salary = model.Salary;
                 user.Role = model.Role;
                 user.Point = model.Point;
+                user.Status = model.Status;
                 _context.SaveChanges();
                 return Ok(user);
             }

@@ -19,6 +19,7 @@ namespace demoapp.Models
         public int? Salary { get; set; }
         public string Role { get; set; }
         public int? Point { get; set; }
+        public int? Status { get; set; }
 
     }
 }

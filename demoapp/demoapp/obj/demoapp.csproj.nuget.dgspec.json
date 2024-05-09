@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BACH\\OneDrive\\Máy tính\\demoapp\\demoapp\\demoapp.csproj": {}
+    "C:\\Users\\BACH\\OneDrive\\Máy tính\\web-qu-n-l-\\demoapp\\demoapp\\demoapp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BACH\\OneDrive\\Máy tính\\demoapp\\demoapp\\demoapp.csproj": {
+    "C:\\Users\\BACH\\OneDrive\\Máy tính\\web-qu-n-l-\\demoapp\\demoapp\\demoapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BACH\\OneDrive\\Máy tính\\demoapp\\demoapp\\demoapp.csproj",
+        "projectUniqueName": "C:\\Users\\BACH\\OneDrive\\Máy tính\\web-qu-n-l-\\demoapp\\demoapp\\demoapp.csproj",
         "projectName": "demoapp",
-        "projectPath": "C:\\Users\\BACH\\OneDrive\\Máy tính\\demoapp\\demoapp\\demoapp.csproj",
+        "projectPath": "C:\\Users\\BACH\\OneDrive\\Máy tính\\web-qu-n-l-\\demoapp\\demoapp\\demoapp.csproj",
         "packagesPath": "C:\\Users\\BACH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BACH\\OneDrive\\Máy tính\\demoapp\\demoapp\\obj\\",
+        "outputPath": "C:\\Users\\BACH\\OneDrive\\Máy tính\\web-qu-n-l-\\demoapp\\demoapp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -47,6 +47,22 @@
             "GoogleAuthenticator": {
               "target": "Package",
               "version": "[3.0.0, )"
+            },
+            "Hangfire": {
+              "target": "Package",
+              "version": "[1.8.12, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.8.12, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.8.12, )"
+            },
+            "Hangfire.PostgreSql": {
+              "target": "Package",
+              "version": "[1.8.6, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

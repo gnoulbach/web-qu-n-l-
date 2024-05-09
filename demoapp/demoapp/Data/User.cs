@@ -25,6 +25,7 @@ namespace demoapp.Data
         public int? Salary { get; set; }
         public string Role { get; set; }
         public int? Point { get; set; }
+        public int? Status { get; set; }
 
         public virtual ICollection<Invoice> Invoices { get; set; }
         public virtual ICollection<Membercard> Membercards { get; set; }

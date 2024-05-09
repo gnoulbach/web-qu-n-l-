@@ -181,6 +181,7 @@ namespace demoapp.Data
                     .HasColumnName("role");
 
                 entity.Property(e => e.Salary).HasColumnName("salary");
+                entity.Property(e => e.Status).HasColumnName("status");
 
                 entity.Property(e => e.Username)
                     .HasMaxLength(255)

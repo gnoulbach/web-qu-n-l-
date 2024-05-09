@@ -1,5 +1,6 @@
-using demoapp.Data;
+﻿using demoapp.Data;
 using demoapp.Models;
+using Hangfire;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,7 +19,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Hangfire.PostgreSql;
 namespace demoapp
 {
     public class Startup
@@ -57,6 +58,28 @@ namespace demoapp
                     ClockSkew = TimeSpan.Zero
                 };
             });
+
+
+
+
+            //          HANGFIRE ở đây anh ơi
+            services.AddHangfire(configuration => configuration
+                    .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                    .UseSimpleAssemblyNameTypeSerializer()  
+                    .UseRecommendedSerializerSettings()
+                    .UsePostgreSqlStorage(Configuration.GetConnectionString("MyDB"),
+                    new Hangfire.PostgreSql.PostgreSqlStorageOptions()
+                    {
+
+                    }));
+
+            services.AddHangfireServer();
+            //Hết đoạn 1 còn đoạn 2 ở dưới dòng 120 anh ơi
+
+
+
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "demoapp", Version = "v1" });
@@ -93,6 +116,10 @@ namespace demoapp
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            // HANGFIRE ở đây nữa anh ơi
+            app.UseHangfireDashboard();
+            //hết rồi anh ơi
 
             app.UseAuthentication();
             app.UseAuthorization();
